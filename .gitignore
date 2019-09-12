@@ -1,0 +1,17 @@
+# R project files to be ignored
+# Packrat files left off github
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+*.rdb
+*.rdx
+.Rproj.user
+
+# Ignore final reports for public repo
+*.pdf
+
+# Ignore partial files
+*$*.docx
+*.swp
+
