@@ -9,7 +9,6 @@
 .Rproj.user
 
 # Ignore final reports for public repo
-*.pdf
 
 # Ignore partial files
 *$*.docx
