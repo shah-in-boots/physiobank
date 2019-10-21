@@ -2,7 +2,7 @@
 
 Not sure what this folder should be called, or what it will encompass. Likely part of Amit project to make a physiological signal database. First will start by organizing ECG data at minimum.
 
-# File Organization
+# File Structure
 
 ## What type of files are within the folder?
 
@@ -16,3 +16,10 @@ There are multiple folders in the original Amit Research Drive, named _Ischemic 
 - VU AMS data = appears to be range of data sets, powerpoints, etc on VUDAMS data
 
 ## Approach to explore the file trees
+
+Likely will use bash scripting to help extract and organize the file system. Its a large file tree that is quite inconsistent.
+
+# File Organization
+
+## VU AMS 
+
