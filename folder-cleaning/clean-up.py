@@ -1,17 +1,25 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
-# Documentation on how to clean up the file tree system (mainly for my own records/efforts)
-
-# Modules: folderstats, scandir
-
-# Local level folder/file names
+# Modules needed to analyze the filetree system
 import os
+import scandir
+import folderstats
+import pandas
+
+# Approach using base modules
 folder = '.'
 filepaths = [os.path.join(folder, f) for f in os.listdir(folder)]
 
-# Recursive version 
+# Scandir is faster than general path analysis
+filepaths = [f.path for f in os.scandir('.') if f.is_file()]
+dirpaths  = [f.path for f in os.scandir('.') if f.is_dir()]
+
+# Using recursive method to analyze the directory system
 for (dirpath, dirnames, filenames) in os.walk('.'):
     for f in filenames:
         print('FILE :', os.path.join(dirpath, f))
     for d in dirnames:
         print('DIRECTORY :', os.path.join(dirpath, d))
+
+# Using folderstats module for analysis
+df = folderstats.folderstats('/', ignore_hidden = True)
